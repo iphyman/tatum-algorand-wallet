@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../home/softweb/gitcoin-projects/tatum-algo-wallet/netlify/functions/create-wallet.ts", "../../home/softweb/gitcoin-projects/tatum-algo-wallet/netlify/libs/response/index.ts"],
+  "sourceRoot": "/tmp/tmp-7865-TCCCH7kt3LDo",
+  "sourcesContent": ["import { Handler } from \"@netlify/functions\";\nimport { generateAlgoWallet } from \"@tatumio/tatum\";\nimport { Response } from \"../libs/response\";\nexport const handler: Handler = (event, context) => {\n  const payload: {\n    name: string;\n  } = JSON.parse(event.body);\n\n  return Response.ok(event.body);\n};\n", "export class Response {\n  public static error = (code: number, message: string) => {\n    return {\n      statusCode: code,\n      body: JSON.stringify({\n        error: {\n          code: code,\n          message: message,\n        },\n      }),\n    };\n  };\n\n  public static ok = (data: any) => {\n    return {\n      statusCode: 200,\n      body: JSON.stringify({ data: data }),\n    };\n  };\n}\n"],
+  "mappings": ";;;;;;;;;AAAA;AAAA;AAAA;;;ACAO,qBAAe;AAAA;AACN,AADT,SACS,QAAQ,CAAC,MAAc,YAAoB;AACvD,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU;AAAA,MACnB,OAAO;AAAA,QACL;AAAA,QACA;AAAA;AAAA;AAAA;AAAA;AAMM,AAbT,SAaS,KAAK,CAAC,SAAc;AAChC,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU,EAAE;AAAA;AAAA;;;ADbtB,IAAM,UAAmB,CAAC,OAAO,YAAY;AAClD,QAAM,UAEF,KAAK,MAAM,MAAM;AAErB,SAAO,SAAS,GAAG,MAAM;AAAA;",
+  "names": []
+}

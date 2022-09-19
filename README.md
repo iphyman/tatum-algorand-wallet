@@ -8,3 +8,4 @@ An opensource project demonstrating how to create a custodian [algorand blockcha
 - [Typescript](https://www.typescriptlang.org/)
 - [Amazon Web Services](https://aws.amazon.com/)
 - [Tatum API and SDK](https://tatum.io/)
+- [Coingecko API](https://www.coingecko.com/)
